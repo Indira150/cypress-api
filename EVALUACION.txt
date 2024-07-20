@@ -1,0 +1,88 @@
+endpoint
+
+https://dev-sl.kapaqnan.net/ob-sl-hurin/v1/payout/invoice
+
+
+REQUEST: 
+
+{
+    "external_invoice_id":"{{$timestamp}}",
+    "total_dcm": 2.2,
+    "currency_cod":"PEN",
+    "customer":{
+        "external_customer_id":{{$timestamp}},
+        "name_str":"Indira Leonela",
+        "document_type":"DNI",
+        "document_id":75119247,
+        "bank_account":{
+            "bank_account_number_str":"52573140680084",
+            "cci_str":"00252517314068008344",
+            "type":"SAVING",
+            "bank_id": 6
+        }
+    }
+}
+
+
+BASIC AUTH :
+
+dc6c0b0a-b7a3-4adc-acf9-ef42ff191c9f
+sk_eeCM3rxKKkbXyguLPsBnkm
+
+RESPONSE: 
+
+{
+    "service": {
+        "status_cod": "success",
+        "message_str": "El recurso se procesó correctamente."
+    },
+    "external_invoice_id": "1721495960",
+    "total_dcm": 2.2,
+    "currency_cod": "PEN",
+    "customer": {
+        "external_customer_id": "1721495960",
+        "name_str": "Indira Leonela",
+        "document_type": "DNI",
+        "document_id": "75119247",
+        "bank_account": {
+            "bank_account_number_str": "52573140680084",
+            "cci_str": "00252517314068008344",
+            "type": "SAVING",
+            "bank_id": "6",
+            "bank_name_str": "BANCO INTERAMERICANO DE FINANZAS"
+        },
+        "customer_id": "669bf19c5f8f174155218fcd"
+    },
+    "invoice_id": "f19c5f8f174155218fcc",
+    "origin_cod": "API",
+    "payout_id": "6697e2bcedd62a7e32890f7a",
+    "company_id": "APT-TEST",
+    "status_cod": "PENDING",
+    "created_dtm": "20/07/2024 17:19:24",
+    "action": {
+        "payout": {
+            "payout_id": "6697e2bcedd62a7e32890f7a",
+            "transaction": {
+                "pending": {
+                    "created_dtm": "20/07/2024 17:19:24"
+                }
+            }
+        }
+    },
+    "reference_cod": "AP Total   -f19c5f8f174155218fcc        ",
+    "fees_dcm": 0
+}
+
+
+MONGO:
+
+mongodb+srv://user_reader:joCx3WKCAlVqeqbD@cluster-test.euppsll.mongodb.net/?retryWrites=true&w=majority
+
+
+VALIDAR
+
+response
+20 caracteres
+stado 201
+
+invoice_id en el mongo
