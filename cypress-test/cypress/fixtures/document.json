@@ -1,0 +1,17 @@
+{
+    "external_invoice_id":"2024-07-20T00:00:00Z",
+    "total_dcm": 2.2,
+    "currency_cod":"PEN",
+    "customer":{
+        "external_customer_id":"2024-07-20T00:00:00Z",
+        "name_str":"Indira Leonela",
+        "document_type":"DNI",
+        "document_id":75119247,
+        "bank_account":{
+            "bank_account_number_str":"52573140680084",
+            "cci_str":"00252517314068008344",
+            "type":"SAVING",
+            "bank_id": 6
+        }
+    }
+}
